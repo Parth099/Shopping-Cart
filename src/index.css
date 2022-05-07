@@ -104,3 +104,16 @@ code {
 .boldface {
     font-family: "Koulen", Helvetica, sans-serif;
 }
+
+.center-text-vert {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* for only nav bar */
+.center-text-vert > a,
+.center-text-vert > a:hover,
+.center-text-vert > a:visited {
+    color: white;
+}
