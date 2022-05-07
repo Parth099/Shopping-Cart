@@ -86,8 +86,12 @@ SRC: https://piccalil.li/blog/a-modern-css-reset/
 @tailwind components;
 @tailwind utilities;
 
-/* GFONT :: Koulen */
-@import url("https://fonts.googleapis.com/css2?family=Koulen&display=swap");
+/* GFONT :: Prompt */
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@200;400;500;600;700&display=swap");
+
+:root {
+    --s_teal: #5cdb94;
+}
 
 body {
     margin: 0;
@@ -95,6 +99,7 @@ body {
         sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: #2a2e35;
 }
 
 code {
@@ -102,7 +107,8 @@ code {
 }
 
 .boldface {
-    font-family: "Koulen", Helvetica, sans-serif;
+    font-family: "Prompt", Helvetica, sans-serif;
+    font-weight: 700;
 }
 
 .center-text-vert {
@@ -116,4 +122,30 @@ code {
 .center-text-vert > a:hover,
 .center-text-vert > a:visited {
     color: white;
+}
+
+/* CURVE */
+.home-page-curve {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.home-page-curve svg {
+    position: relative;
+    display: block;
+    width: calc(142% + 1.3px);
+    height: 398px;
+}
+
+.home-page-curve .shape-fill {
+    fill: var(--s_teal);
+}
+
+.void {
+    display: none;
 }
