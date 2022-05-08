@@ -1,16 +1,16 @@
 //modules
-import { useEffect, useState } from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
 import useCart from "./hooks/useCart";
 
 //image
-import bagIcon from "./img/bag.png";
+import bagIcon from "./img/icon/bag.png";
+import coverPhone from "./img/phones/samsung/galaxy_z_flip3.jpg";
 
 //mostly nav bar logic
 function App() {
     //custom hook
     const [appendToCart, removeFromCart, cartArr] = useCart();
-    const location = useLocation();
+    const currRoute = useLocation();
 
     return (
         <>
@@ -37,8 +37,31 @@ function App() {
                     </div>
                 </div>
             </div>
-            {location.pathname === "/" /*render if we are at home ONLY*/ && (
-                <div className="Landing Page text-white">
+            {currRoute.pathname === "/" /*render if we are at home ONLY*/ && (
+                <div className="Landing Page text-white relative min-h-screen">
+                    <section className="opening-ad">
+                        <div className="w-rbox border-white border-4 mx-auto mt-10 rounded-lg z-10">
+                            <img src={coverPhone} alt="Galaxy Flip 3" className="w-100 h-100" />
+                            <div className="bg-white flex flex-col text-slate-600  p-8">
+                                <p className="text-sm mb-8">
+                                    Unexpected colors. A new protective layer and film to fortify the main screen. An IPX8 water resistance that lets
+                                    you post even in a downpour. If it sounds like we rethought the Flip, we did. Now it’s a statement.
+                                </p>
+                                <p class="descrip">
+                                    <span class="prompt-font text-3xl">Name: </span>
+                                    Galaxy Z Flip3
+                                </p>
+                                <p class="descrip">
+                                    <span class="prompt-font text-3xl">Price: </span>
+                                    $999.99
+                                </p>
+                                <p class="descrip">
+                                    <span class="prompt-font text-3xl">Storage: </span>
+                                    256gb
+                                </p>
+                            </div>
+                        </div>
+                    </section>
                     <section>
                         <div className="home-page-curve">
                             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">

@@ -110,6 +110,14 @@ code {
     font-family: "Prompt", Helvetica, sans-serif;
     font-weight: 700;
 }
+.prompt-font {
+    font-family: "Prompt", Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.descrip {
+    font-weight: 500;
+}
 
 .center-text-vert {
     display: flex;
