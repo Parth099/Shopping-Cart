@@ -6,6 +6,15 @@ module.exports = {
             width: {
                 rbox: "1000px",
             },
+            spacing: {
+                128: "32rem",
+            },
+        },
+        screens: {
+            // => @media (max-width: ???px)
+            md: { max: "1100px" },
+            sm: { max: "600px" },
+            xs: { max: "500px" }
         },
     },
     plugins: [],
