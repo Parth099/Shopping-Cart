@@ -1,20 +1,17 @@
 //modules
-import { Link, Outlet, useLocation } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import useCart from "./hooks/useCart";
-
 //image
 import bagIcon from "./img/icon/bag.png";
-
 
 //mostly nav bar logic
 function App() {
     //custom hook
     const [appendToCart, removeFromCart, cartArr] = useCart();
-    const currRoute = useLocation();
 
     return (
         <>
-            <div className="navbar ">
+            <div className="navbar z-10">
                 <div className="px-12 bg-fiodGray flex justify-between text-white p-3 md:flex-col items-center gap-6 pt-4">
                     <div className="boldface text-6xl text-cteal sm:text-4xl">
                         <Link to={"./"}>Phony Store</Link>

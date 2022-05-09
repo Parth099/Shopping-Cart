@@ -9,12 +9,15 @@ module.exports = {
             spacing: {
                 128: "32rem",
             },
+            zIndex: {
+                neg: "-1",
+            },
         },
         screens: {
             // => @media (max-width: ???px)
             md: { max: "1100px" },
             sm: { max: "600px" },
-            xs: { max: "500px" }
+            xs: { max: "500px" },
         },
     },
     plugins: [],

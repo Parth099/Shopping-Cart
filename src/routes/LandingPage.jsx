@@ -1,4 +1,4 @@
-import coverPhone from "../img/phones/samsung/galaxy_z_flip3.jpg";
+import coverPhone from "../img/phones/samsung/Galaxy-Z-Flip3.png";
 
 export default function LandingPage() {
     return (
@@ -11,17 +11,17 @@ export default function LandingPage() {
                             Unexpected colors. A new protective layer and film to fortify the main screen. An IPX8 water resistance that lets you post
                             even in a downpour. If it sounds like we rethought the Flip, we did. Now it's a statement.
                         </p>
-                        <p class="descrip">
-                            <span class="prompt-font">Name</span>
-                            <p>Galaxy Z Flip3</p>
+                        <p className="descrip">
+                            <span className="prompt-font">Name</span>
+                            <span>Galaxy Z Flip3</span>
                         </p>
-                        <p class="descrip">
-                            <span class="prompt-font">Price</span>
-                            <p>$999.99</p>
+                        <p className="descrip">
+                            <span className="prompt-font">Price</span>
+                            <span>$999.99</span>
                         </p>
-                        <p class="descrip">
-                            <span class="prompt-font">Storage</span>
-                            <p>256 TB</p>
+                        <p className="descrip">
+                            <span className="prompt-font">Storage</span>
+                            <span>256 GB</span>
                         </p>
                     </div>
                 </div>
