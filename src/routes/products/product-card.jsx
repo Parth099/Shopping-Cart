@@ -2,12 +2,9 @@
 Takes in data for one phone and displays it in a nice card
 */
 
-
 export default function ProductCard(props) {
     const { phoneData } = props;
     if (!phoneData) return;
-
-    console.log(phoneData);
 
     return (
         <section className="flex flex-col bg-white p-3 w-96 rounded-lg shadow-lg relative">

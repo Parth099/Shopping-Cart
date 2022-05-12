@@ -33,7 +33,7 @@ function App() {
                     </div>
                 </div>
             </div>
-            <div className="mx-12">
+            <div className="mx-12 grid-sm:mx-2">
                 <Outlet />
             </div>
         </>

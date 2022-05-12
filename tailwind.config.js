@@ -26,6 +26,10 @@ module.exports = {
             md: { max: "1100px" },
             sm: { max: "600px" },
             xs: { max: "500px" },
+
+            "grid-lg": { max: "1624px" },
+            "grid-md": { max: "1224px" },
+            "grid-sm": { max: "900px" },
         },
     },
     plugins: [],
