@@ -2,6 +2,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
 import ErrorPage from "./routes/ErrorPage";
 import LandingPage from "./routes/LandingPage";
+import Products from "./routes/products/products";
+import AllProducts from "./routes/products/products-index";
 
 export default function RouteSwitcher() {
     return (
@@ -9,6 +11,9 @@ export default function RouteSwitcher() {
             <Routes>
                 <Route path={"/"} element={<App />}>
                     <Route index element={<LandingPage />}></Route>
+                    <Route path="products" element={<Products />}>
+                        <Route index element={<AllProducts />}></Route>
+                    </Route>
                     <Route path={"*"} element={<ErrorPage />}></Route>
                 </Route>
             </Routes>

@@ -88,7 +88,7 @@ const PHONES = [
     {
         brand: "google",
         price: 549.99,
-        name: "Pixel 6 Pro",
+        name: "Pixel 6",
         storage: "64 GB",
         image: pixel6,
     },
@@ -102,4 +102,11 @@ function getPhoneByBrand(brandName) {
     return PHONES.filter((phone) => phone.brand === brandName);
 }
 
-export { getAllPhones, getPhoneByBrand };
+function getBrands() {
+    const brandSet = new Set();
+    //array from set of brands
+    PHONES.forEach((obj) => brandSet.add(obj.brand));
+    return Array.from(brandSet);
+}
+
+export { getAllPhones, getPhoneByBrand, getBrands };

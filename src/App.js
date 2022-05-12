@@ -19,7 +19,9 @@ function App() {
                     <div className="flex flex-col justify-center">
                         <div className="flex gap-12 text-3xl sm:text-2xl">
                             <div className="center-text-vert">
-                                <p>Products</p>
+                                <p>
+                                    <Link to={"products"}>Products</Link>
+                                </p>
                             </div>
                             <div className="flex flex-row gap-1">
                                 <img className="w-12" src={bagIcon} alt={"Cart Details"} />
