@@ -22,9 +22,10 @@ const useCart = () => {
             //if item exists then add 1 to quantity
             if (itemDetail.id === newItemId) {
                 isUpdated = 1;
+                return { ...itemDetail, quantity: itemDetail.quantity + 1 };
+            } else {
+                return itemDetail;
             }
-            //this saves an if statement
-            return isUpdated ? { ...itemDetail, quantity: itemDetail.quantity + 1 } : itemDetail;
         });
         //if it didnt exists just add it in
         if (!isUpdated) {
@@ -38,7 +39,7 @@ const useCart = () => {
             //subtract 1
 
             //if item quantity 0; DONT render
-            return itemDetail.id === itemId ? { ...itemDetail, quantity: itemDetail.quantity - 1 } : itemDetail;
+            return itemDetail.id === itemId ? { ...itemDetail, quantity: Math.max(itemDetail.quantity - 1, 0) } : itemDetail;
         });
         setCartArr(newCart); //state is altred everyone is happy
     };
