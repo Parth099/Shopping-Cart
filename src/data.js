@@ -98,6 +98,16 @@ function getAllPhones() {
     return PHONES;
 }
 
+function getPhoneByName(id) {
+    let copy = {};
+    for (let phone of PHONES) {
+        if (phone.name === id) {
+            copy = Object.assign({}, phone); //copy to ensure no edits
+        }
+    }
+    return copy;
+}
+
 function getPhoneByBrand(brandName) {
     return PHONES.filter((phone) => phone.brand === brandName);
 }
@@ -109,4 +119,4 @@ function getBrands() {
     return Array.from(brandSet);
 }
 
-export { getAllPhones, getPhoneByBrand, getBrands };
+export { getAllPhones, getPhoneByBrand, getBrands, getPhoneByName };

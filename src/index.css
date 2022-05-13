@@ -167,6 +167,10 @@ code {
     font-family: "Montserrat", monospace, sans-serif;
 }
 
+.cart-font {
+    font-family: Helvetica, sans-serif;
+}
+
 /* from - https://css-tricks.com/css-link-hover-effects/ */
 
 .menu-link {

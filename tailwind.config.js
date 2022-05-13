@@ -15,6 +15,7 @@ module.exports = {
                 rbox: "1000px",
             },
             spacing: {
+                84: "21rem",
                 128: "32rem",
             },
             zIndex: {
