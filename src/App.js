@@ -1,6 +1,6 @@
 //modules and components
 import { Link, Outlet } from "react-router-dom";
-import UserCart from "./UserCart";
+import UserCart from "./routes/CartDetails/UserCart";
 //hooks
 import useCart from "./hooks/useCart";
 import useModal from "./hooks/useModal";
@@ -41,7 +41,11 @@ function App() {
                 </div>
             </div>
             <div className="mx-12 grid-sm:mx-2">
-                <Modal isOpen={isOpen} closeModal={closeModal} element={<UserCart />} />
+                <Modal
+                    isOpen={isOpen}
+                    closeModal={closeModal}
+                    element={<UserCart cartData={cartArr} appendToCart={appendToCart} removeFromCart={removeFromCart} closeModal={closeModal} />}
+                />
                 <Outlet context={[appendToCart, removeFromCart, cartArr]} />
             </div>
         </>

@@ -20,6 +20,12 @@ module.exports = {
             zIndex: {
                 neg: "-1",
             },
+            padding: {
+                "overlay-reg": "30vw",
+            },
+            borderWidth: {
+                DEFAULT: "1px",
+            },
         },
         screens: {
             // => @media (max-width: ???px)
