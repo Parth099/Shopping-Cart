@@ -23,7 +23,7 @@ export default function ProductCard(props) {
             <p className="font-normal absolute top-4 right-4">${phoneData.price}</p>
             <p className="font-semibold absolute top-4 left-4">{phoneData.storage}</p>
             <button
-                className="mt-2 p-2 bg-gradient-to-r from-cyan-500 to-indigo-500 rounded-md text-white text-xl  hover:font-bold"
+                className="mt-2 p-2 bg-gradient-to-r from-cyan-500 to-violet-500 rounded-md text-white text-xl  hover:font-bold"
                 onClick={addPhoneToCart}
             >
                 Add to Cart

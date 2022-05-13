@@ -1,13 +1,19 @@
-//modules
+//modules and components
 import { Link, Outlet } from "react-router-dom";
+import UserCart from "./UserCart";
+//hooks
 import useCart from "./hooks/useCart";
+import useModal from "./hooks/useModal";
 //image
 import bagIcon from "./img/icon/bag.png";
+import Modal from "./modal";
 
 //mostly nav bar logic
 function App() {
     //custom hook
     const [appendToCart, removeFromCart, cartArr] = useCart();
+    const [isOpen, openModal, closeModal] = useModal();
+
     let cartArrLen = cartArr.reduce((prev, curr) => prev + curr.quantity, 0); //adds up cart values
 
     return (
@@ -24,7 +30,7 @@ function App() {
                                     <Link to={"products"}>Products</Link>
                                 </p>
                             </div>
-                            <div className="flex flex-row gap-1">
+                            <div className="flex flex-row gap-1 cursor-pointer" onClick={openModal}>
                                 <img className="w-12" src={bagIcon} alt={"Cart Details"} />
                                 <div className="center-text-vert">
                                     <p className="px-1 text-2xlf ont-semibold bg-red-500 align-middle rounded-md">{cartArrLen}</p>
@@ -35,6 +41,7 @@ function App() {
                 </div>
             </div>
             <div className="mx-12 grid-sm:mx-2">
+                <Modal isOpen={isOpen} closeModal={closeModal} element={<UserCart />} />
                 <Outlet context={[appendToCart, removeFromCart, cartArr]} />
             </div>
         </>
