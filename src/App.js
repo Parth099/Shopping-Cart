@@ -8,6 +8,7 @@ import bagIcon from "./img/icon/bag.png";
 function App() {
     //custom hook
     const [appendToCart, removeFromCart, cartArr] = useCart();
+    let cartArrLen = cartArr.reduce((prev, curr) => prev + curr.quantity, 0); //adds up cart values
 
     return (
         <>
@@ -26,7 +27,7 @@ function App() {
                             <div className="flex flex-row gap-1">
                                 <img className="w-12" src={bagIcon} alt={"Cart Details"} />
                                 <div className="center-text-vert">
-                                    <p className="px-1 text-2xlf ont-semibold bg-red-500 align-middle rounded-md">{cartArr.length}</p>
+                                    <p className="px-1 text-2xlf ont-semibold bg-red-500 align-middle rounded-md">{cartArrLen}</p>
                                 </div>
                             </div>
                         </div>
@@ -34,7 +35,7 @@ function App() {
                 </div>
             </div>
             <div className="mx-12 grid-sm:mx-2">
-                <Outlet />
+                <Outlet context={[appendToCart, removeFromCart, cartArr]} />
             </div>
         </>
     );

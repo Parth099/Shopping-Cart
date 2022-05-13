@@ -1,8 +1,11 @@
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useOutletContext } from "react-router-dom";
 import { getBrands } from "../../data.js";
 
 export default function Products() {
     const Brands = getBrands();
+    //pass down for product card
+    //we dont need  removeFromCart, cartArr
+    const [appendToCart] = useOutletContext();
 
     return (
         <div className="bg-caparol mt-3 py-6 px-5 rounded-lg min-w-full flex menu-font justify-center grid-sm:flex-col grid-sm:items-center">
@@ -21,7 +24,7 @@ export default function Products() {
                 </div>
             </div>
             <div className="product-grid-display grid grid-cols-3 gap-5 grid-lg:grid-cols-2 grid-md:grid-cols-1 grid-sm:mt-10">
-                <Outlet />
+                <Outlet context={[appendToCart]} />
             </div>
         </div>
     );
