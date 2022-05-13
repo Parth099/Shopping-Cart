@@ -37,6 +37,8 @@ module.exports = {
             "grid-lg": { max: "1624px" },
             "grid-md": { max: "1224px" },
             "grid-sm": { max: "900px" },
+
+            "cart-sm": { max: "650px" },
         },
     },
     plugins: [],

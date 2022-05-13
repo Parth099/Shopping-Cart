@@ -13,7 +13,7 @@ export default function Modal(props) {
     if (isOpen) {
         return (
             <div className="overlay" onClick={emptySpaceCloser}>
-                <div className="element-container z-10 m-36">{element}</div>
+                <div className="element-container z-10 m-36 grid-sm:m-8 cart-sm:m-1">{element}</div>
             </div>
         );
     }
