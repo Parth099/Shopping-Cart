@@ -9,12 +9,12 @@ will display all products
 
 export default function AllProducts() {
     const ALL_PHONES = getAllPhones();
-    const [appendToCart] = useOutletContext();
+    const [dispatchCartAction] = useOutletContext();
 
     return (
         <>
             {ALL_PHONES.map((phone) => (
-                <ProductCard phoneData={phone} key={phone.name} appendToCart={appendToCart} />
+                <ProductCard phoneData={phone} key={phone.name} dispatchCartAction={dispatchCartAction} />
             ))}
         </>
     );

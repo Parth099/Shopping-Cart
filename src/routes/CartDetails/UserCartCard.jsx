@@ -1,7 +1,7 @@
 import { getPhoneByName } from "../../data";
 
 export default function UserCartCard(props) {
-    const { id, addOne, removeOne, quantity, formatMoney } = props; //string
+    const { id, dispatchCartAction, quantity, formatMoney } = props; //string
     const phoneData = getPhoneByName(id);
     return (
         <div className="item-container flex justify-between items-center py-4 cart-sm:flex-col">
@@ -23,14 +23,14 @@ export default function UserCartCard(props) {
                     <span className="quant font-semibold">Quantity: </span>
                     <span className="rounded-sm align-middle flex">
                         <button
-                            onClick={() => removeOne(id)}
+                            onClick={() => dispatchCartAction({ id, type: "remove" })}
                             className="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-10 rounded-l cursor-pointer"
                         >
                             <span className="m-auto text-2xl font-thin">-</span>
                         </button>
                         <p className="bg-gray-300 flex flex-col justify-center px-2">{quantity}</p>
                         <button
-                            onClick={() => addOne(id)}
+                            onClick={() => dispatchCartAction({ id, type: "append" })}
                             className="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-10 rounded-r cursor-pointer"
                         >
                             <span className="m-auto text-2xl font-thin">+</span>

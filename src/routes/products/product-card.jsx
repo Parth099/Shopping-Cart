@@ -4,11 +4,11 @@ Takes in data for one phone and displays it in a nice card
 
 export default function ProductCard(props) {
     const { phoneData } = props;
-    const { appendToCart } = props;
+    const { dispatchCartAction } = props;
     if (!phoneData) return;
 
     const addPhoneToCart = () => {
-        appendToCart(phoneData.name);
+        dispatchCartAction({ id: phoneData.name, type: "append" });
     };
 
     return (

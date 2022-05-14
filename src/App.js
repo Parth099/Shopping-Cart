@@ -11,7 +11,7 @@ import Modal from "./modal";
 //mostly nav bar logic
 function App() {
     //custom hook
-    const [appendToCart, removeFromCart, cartArr] = useCart();
+    const [cartArr, dispatchCartAction] = useCart();
     const [isOpen, openModal, closeModal] = useModal();
 
     let cartArrLen = cartArr.reduce((prev, curr) => prev + curr.quantity, 0); //adds up cart values
@@ -44,9 +44,9 @@ function App() {
                 <Modal
                     isOpen={isOpen}
                     closeModal={closeModal}
-                    element={<UserCart cartData={cartArr} appendToCart={appendToCart} removeFromCart={removeFromCart} closeModal={closeModal} />}
+                    element={<UserCart cartArr={cartArr} dispatchCartAction={dispatchCartAction} closeModal={closeModal} />}
                 />
-                <Outlet context={[appendToCart, removeFromCart, cartArr]} />
+                <Outlet context={[dispatchCartAction, cartArr]} />
             </div>
         </>
     );

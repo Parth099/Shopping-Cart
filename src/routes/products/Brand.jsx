@@ -6,11 +6,12 @@ export default function Brand() {
     let params = useParams();
     const brand = params.brand;
     const phonesByBrand = getPhoneByBrand(brand);
-    const [appendToCart] = useOutletContext();
+    const [dispatchCartAction] = useOutletContext();
+
     return (
         <>
             {phonesByBrand.map((phone) => (
-                <ProductCard phoneData={phone} key={phone.name} appendToCart={appendToCart} />
+                <ProductCard phoneData={phone} key={phone.name} dispatchCartAction={dispatchCartAction} />
             ))}
         </>
     );
