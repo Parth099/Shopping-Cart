@@ -4,4 +4,4 @@ This project serves as a introduction to `react-router`, as it creates a multipa
 
 Project Guideline at [The Odin Project](https://www.theodinproject.com/lessons/node-path-javascript-shopping-cart)
 
-Live-Link: **TBA**
+Live-Link: [Shopping Cart](https://parth099.github.io/Shopping-Cart/)

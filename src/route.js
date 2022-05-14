@@ -10,7 +10,7 @@ export default function RouteSwitcher() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path={"/"} element={<App />}>
+                <Route path={"/Shopping-Cart"} element={<App />}>
                     <Route index element={<LandingPage />}></Route>
                     <Route path="products" element={<Products />}>
                         <Route index element={<AllProducts />}></Route>

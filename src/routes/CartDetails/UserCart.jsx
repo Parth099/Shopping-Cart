@@ -25,7 +25,7 @@ export default function UserCart(props) {
             </div>
             <hr className="mt-2 border-black" />
             {cartData.map((item) => {
-                if (item.quantity === 0) return; //skip empty items
+                if (item.quantity === 0) return null; //skip empty items
                 return (
                     <section key={item.id}>
                         <UserCartCard
