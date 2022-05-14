@@ -10,7 +10,6 @@ const useLocalStorage = (state) => {
 
 function LocalStorageInit() {
     const LSResponse = localStorage.getItem(PROJECT_KEY);
-    console.log({ LSResponse });
     return LSResponse ? JSON.parse(LSResponse) : [];
 }
 
