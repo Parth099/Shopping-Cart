@@ -7,13 +7,14 @@ import useModal from "./hooks/useModal";
 //image
 import bagIcon from "./img/icon/bag.png";
 import Modal from "./modal";
+import { LocalStorageInit, useLocalStorage } from "./hooks/useLocalStorage";
 
 //mostly nav bar logic
 function App() {
     //custom hook
-    const [cartArr, dispatchCartAction] = useCart();
+    const [cartArr, dispatchCartAction] = useCart(LocalStorageInit);
+    useLocalStorage(cartArr);
     const [isOpen, openModal, closeModal] = useModal();
-
     let cartArrLen = cartArr.reduce((prev, curr) => prev + curr.quantity, 0); //adds up cart values
 
     return (

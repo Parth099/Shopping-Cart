@@ -59,8 +59,9 @@ function reducer(cartArr, cartAction) {
     }
 }
 
-const useCart = () => {
-    const [state, dispatch] = useReducer(reducer, []);
+const useCart = (init) => {
+    //init is a function that gets the default value for the initial state
+    const [state, dispatch] = useReducer(reducer, [], init);
     return [state, dispatch];
 };
 
