@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Shopping-Cart/static/css/main.cfa4e549.css",
-    "main.js": "/Shopping-Cart/static/js/main.c0277a8d.js",
+    "main.js": "/Shopping-Cart/static/js/main.55baf289.js",
     "static/media/Samsung-Galaxy-S22-Plus.png": "/Shopping-Cart/static/media/Samsung-Galaxy-S22-Plus.55be89163bcba8018de7.png",
     "static/media/Apple-iPhone-13-Pro.png": "/Shopping-Cart/static/media/Apple-iPhone-13-Pro.c84317dc3f73852d8f48.png",
     "static/media/Galaxy-Z-Flip3.png": "/Shopping-Cart/static/media/Galaxy-Z-Flip3.5057bbd65745b083ad10.png",
@@ -15,10 +15,10 @@
     "static/media/x.svg": "/Shopping-Cart/static/media/x.f5457199865cf8c177ab311219383786.svg",
     "index.html": "/Shopping-Cart/index.html",
     "main.cfa4e549.css.map": "/Shopping-Cart/static/css/main.cfa4e549.css.map",
-    "main.c0277a8d.js.map": "/Shopping-Cart/static/js/main.c0277a8d.js.map"
+    "main.55baf289.js.map": "/Shopping-Cart/static/js/main.55baf289.js.map"
   },
   "entrypoints": [
     "static/css/main.cfa4e549.css",
-    "static/js/main.c0277a8d.js"
+    "static/js/main.55baf289.js"
   ]
 }
