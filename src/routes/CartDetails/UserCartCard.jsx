@@ -26,14 +26,14 @@ export default function UserCartCard(props) {
                             onClick={() => removeOne(id)}
                             className="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-10 rounded-l cursor-pointer"
                         >
-                            <span class="m-auto text-2xl font-thin">-</span>
+                            <span className="m-auto text-2xl font-thin">-</span>
                         </button>
                         <p className="bg-gray-300 flex flex-col justify-center px-2">{quantity}</p>
                         <button
                             onClick={() => addOne(id)}
                             className="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-10 rounded-r cursor-pointer"
                         >
-                            <span class="m-auto text-2xl font-thin">+</span>
+                            <span className="m-auto text-2xl font-thin">+</span>
                         </button>
                     </span>
                 </div>
