@@ -28,12 +28,18 @@ export default function UserCart(props) {
                 if (item.quantity === 0) return; //skip empty items
                 return (
                     <section key={item.id}>
-                        <UserCartCard id={item.id} addOne={appendToCart} removeOne={removeFromCart} quantity={item.quantity} />
+                        <UserCartCard
+                            id={item.id}
+                            addOne={appendToCart}
+                            removeOne={removeFromCart}
+                            quantity={item.quantity}
+                            formatMoney={formatMoney}
+                        />
                         <hr className="border-black border-dashed" />
                     </section>
                 );
             })}
-            {cartData.length === 0 && <p className="text-center p-8 font-light text-5xl">The Cart is Empty</p>}
+            {cartData.length === total && <p className="text-center p-8 font-light text-5xl">The Cart is Empty</p>}
             <p className="text-right text-2xl mt-2">
                 <span className="text-3xl font-bold">Total: </span>
                 {formatMoney(total)}

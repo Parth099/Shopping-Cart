@@ -10,6 +10,7 @@ module.exports = {
                 fiolGray: "#2a2e35",
                 fiodGray: "#12181b",
                 caparol: "#ecfcf0",
+                lblue: "#f8fafb",
             },
             width: {
                 rbox: "1000px",
@@ -17,6 +18,7 @@ module.exports = {
             spacing: {
                 84: "21rem",
                 128: "32rem",
+                quan: "1.25rem",
             },
             zIndex: {
                 neg: "-1",
