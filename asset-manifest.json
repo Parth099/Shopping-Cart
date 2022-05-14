@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Shopping-Cart/static/css/main.cfa4e549.css",
+    "main.js": "/Shopping-Cart/static/js/main.1ed3680e.js",
+    "static/media/Samsung-Galaxy-S22-Plus.png": "/Shopping-Cart/static/media/Samsung-Galaxy-S22-Plus.55be89163bcba8018de7.png",
+    "static/media/Apple-iPhone-13-Pro.png": "/Shopping-Cart/static/media/Apple-iPhone-13-Pro.c84317dc3f73852d8f48.png",
+    "static/media/Galaxy-Z-Flip3.png": "/Shopping-Cart/static/media/Galaxy-Z-Flip3.5057bbd65745b083ad10.png",
+    "static/media/Samsung-Galaxy-A13.png": "/Shopping-Cart/static/media/Samsung-Galaxy-A13.e53d2f83c1e0eca6dece.png",
+    "static/media/Google-Pixel-6-Pro.png": "/Shopping-Cart/static/media/Google-Pixel-6-Pro.cd8633c1f1ee59de33c9.png",
+    "static/media/Apple-iPhone-12.png": "/Shopping-Cart/static/media/Apple-iPhone-12.e135353b8a32450ae137.png",
+    "static/media/Samsung-Galaxy-A53.png": "/Shopping-Cart/static/media/Samsung-Galaxy-A53.7f45323bf75f5065f731.png",
+    "static/media/Apple-iPhone-12-Pro-Max.png": "/Shopping-Cart/static/media/Apple-iPhone-12-Pro-Max.31d3126c4c0cd3da9000.png",
+    "static/media/Google-Pixel-6.png": "/Shopping-Cart/static/media/Google-Pixel-6.386e9c73be71a13c1b36.png",
+    "static/media/Samsung-Galaxy-S22.png": "/Shopping-Cart/static/media/Samsung-Galaxy-S22.f83137e09159f6718395.png",
+    "static/media/x.svg": "/Shopping-Cart/static/media/x.f5457199865cf8c177ab311219383786.svg",
+    "index.html": "/Shopping-Cart/index.html",
+    "main.cfa4e549.css.map": "/Shopping-Cart/static/css/main.cfa4e549.css.map",
+    "main.1ed3680e.js.map": "/Shopping-Cart/static/js/main.1ed3680e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cfa4e549.css",
+    "static/js/main.1ed3680e.js"
+  ]
+}
