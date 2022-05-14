@@ -14,7 +14,7 @@ export default function ProductCard(props) {
     return (
         <section className="flex flex-col bg-white p-3 w-96 rounded-lg shadow-lg relative">
             <div className="image-container h-40 flex justify-center">
-                <img src={phoneData.image} alt={"Image of " + phoneData.name} className="" />
+                <img className="" src={phoneData.image} alt={"Image of " + phoneData.name} />
             </div>
             <div className="flex gap-1 text-xl justify-between mt-6">
                 <p className="font-bold text-2xl">{phoneData.brand.toUpperCase()}</p>
