@@ -1,15 +1,16 @@
 import { useParams } from "react-router-dom";
-import { getPhoneByBrand } from "../../data.js";
+import { getPhoneByBrand, getAllPhones } from "../../data.js";
 import ProductCard from "./product-card.jsx";
 
 export default function Brand() {
     let params = useParams();
+    console.log(params);
     const brand = params.brand;
-    const phonesByBrand = getPhoneByBrand(brand);
+    const phones = brand === "all" ? getAllPhones() : getPhoneByBrand(brand);
 
     return (
         <>
-            {phonesByBrand.map((phone) => (
+            {phones.map((phone) => (
                 <ProductCard phoneData={phone} key={phone.name} />
             ))}
         </>
