@@ -1,7 +1,12 @@
 import { getPhoneByName } from "../../data";
 
+//context
+import { useContext } from "react";
+import CartContext from "../../context/CartContext";
+
 export default function UserCartCard(props) {
-    const { id, dispatchCartAction, quantity, formatMoney } = props; //string
+    const { id, quantity, formatMoney } = props; //string
+    const { dispatchCartAction } = useContext(CartContext);
     const phoneData = getPhoneByName(id);
     return (
         <div className="item-container flex justify-between items-center py-4 cart-sm:flex-col">

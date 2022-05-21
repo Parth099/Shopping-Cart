@@ -2,9 +2,13 @@ import closeIcon from "../../img/icon/x.svg";
 import UserCartCard from "./UserCartCard";
 import { getPhoneByName } from "../../data";
 
+import { useContext } from "react";
+import CartContext from "../../context/CartContext";
+
 export default function UserCart(props) {
     //get proper CRUD funcs out
-    const { cartArr, dispatchCartAction, closeModal } = props;
+    const { closeModal } = props;
+    const {cartArr, dispatchCartAction} = useContext(CartContext)
 
     //sums the total total
     const total = cartArr.reduce((prev, curr) => {

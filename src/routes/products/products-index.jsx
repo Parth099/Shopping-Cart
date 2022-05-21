@@ -8,11 +8,11 @@ will display all products
 
 //context
 import { useContext } from "react";
-import cartContext from "../../context/CartContext.js";
+import CartContext from "../../context/CartContext.js";
 
 export default function AllProducts() {
     const ALL_PHONES = getAllPhones();
-    const [cartArr, dispatchCartAction] = useContext(cartContext);
+    const { dispatchCartAction } = useContext(CartContext);
 
     return (
         <>

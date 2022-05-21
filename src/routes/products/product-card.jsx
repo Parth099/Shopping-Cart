@@ -4,11 +4,11 @@ Takes in data for one phone and displays it in a nice card
 
 //context
 import { useContext } from "react";
-import cartContext from "../../context/CartContext.js";
+import CartContext from "../../context/CartContext.js";
 
 export default function ProductCard(props) {
     const { phoneData } = props;
-    const [cartArr, dispatchCartAction] = useContext(cartContext);
+    const { dispatchCartAction } = useContext(CartContext);
 
     if (!phoneData) return;
 

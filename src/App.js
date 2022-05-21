@@ -46,7 +46,7 @@ function App() {
                 </div>
             </div>
             <div className="mx-12 grid-sm:mx-2">
-                <CartContext.Provider value={[cartArr, dispatchCartAction]}>
+                <CartContext.Provider value={{ cartArr, dispatchCartAction }}>
                     <Modal isOpen={isOpen} closeModal={closeModal} element={<UserCart closeModal={closeModal} />} />
                     <Outlet />
                 </CartContext.Provider>
