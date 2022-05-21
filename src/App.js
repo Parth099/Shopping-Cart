@@ -4,6 +4,10 @@ import UserCart from "./routes/CartDetails/UserCart";
 //hooks
 import useCart from "./hooks/useCart";
 import useModal from "./hooks/useModal";
+
+//context
+import CartContext from "./context/CartContext";
+
 //image
 import bagIcon from "./img/icon/bag.png";
 import Modal from "./modal";
@@ -42,12 +46,10 @@ function App() {
                 </div>
             </div>
             <div className="mx-12 grid-sm:mx-2">
-                <Modal
-                    isOpen={isOpen}
-                    closeModal={closeModal}
-                    element={<UserCart cartArr={cartArr} dispatchCartAction={dispatchCartAction} closeModal={closeModal} />}
-                />
-                <Outlet context={[dispatchCartAction, cartArr]} />
+                <CartContext.Provider value={[cartArr, dispatchCartAction]}>
+                    <Modal isOpen={isOpen} closeModal={closeModal} element={<UserCart closeModal={closeModal} />} />
+                    <Outlet />
+                </CartContext.Provider>
             </div>
         </>
     );

@@ -1,4 +1,4 @@
-import { useOutletContext, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { getPhoneByBrand } from "../../data.js";
 import ProductCard from "./product-card.jsx";
 
@@ -6,12 +6,11 @@ export default function Brand() {
     let params = useParams();
     const brand = params.brand;
     const phonesByBrand = getPhoneByBrand(brand);
-    const [dispatchCartAction] = useOutletContext();
 
     return (
         <>
             {phonesByBrand.map((phone) => (
-                <ProductCard phoneData={phone} key={phone.name} dispatchCartAction={dispatchCartAction} />
+                <ProductCard phoneData={phone} key={phone.name} />
             ))}
         </>
     );

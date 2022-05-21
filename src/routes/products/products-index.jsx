@@ -1,15 +1,18 @@
 import ProductCard from "./product-card";
 import { getAllPhones } from "../../data.js";
-import { useOutletContext } from "react-router-dom";
 
 /*
 index route for /products/
 will display all products
 */
 
+//context
+import { useContext } from "react";
+import cartContext from "../../context/CartContext.js";
+
 export default function AllProducts() {
     const ALL_PHONES = getAllPhones();
-    const [dispatchCartAction] = useOutletContext();
+    const [cartArr, dispatchCartAction] = useContext(cartContext);
 
     return (
         <>
